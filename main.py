@@ -73,7 +73,11 @@ class Calculator:
         frame = tk.Frame(self.window, height=221, bg=LIGHT_GRAY)
         frame.pack(expand=True, fill="both")
         return frame
-    
+        
+    def add_to_expression(self, value):
+        self.current_expression += str(value)
+        self.update_label()
+        
     def create_buttons_frame(self):
         frame = tk.Frame(self.window)
         frame.pack(expand=True, fill="both")
